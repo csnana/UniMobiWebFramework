@@ -90,29 +90,21 @@ These tests run in Chrome using Selenium.
 
 Some important test files include:
 
-- AndroidBasicFlowTest.java
-    - Basic Android test flow
+- AndroidBasicFlowTest.java - Basic Android test flow
 
-- IoSBasicFlowTest.java
-    - Basic iOS test flow
+- IoSBasicFlowTest.java - Basic iOS test flow
 
-- ChromeBasicFlowTest.java
-    - Basic browser test flow
+- ChromeBasicFlowTest.java - Basic browser test flow
 
-- AndroidRunner01.java
-    - Runner for Android test suite
+- AndroidRunner01.java - Runner for Android test suite
 
-- BrowserRunner01.java
-    - Runner for browser test suite
+- BrowserRunner01.java - Runner for browser test suite
 
-- IoSRunner01.java
-    - Runner for iOS test suite
+- IoSRunner01.java - Runner for iOS test suite
 
-- AbstractAppiumTest.java
-    - Base class for Appium-based mobile tests
+- AbstractAppiumTest.java - Base class for Appium-based mobile tests
 
-- AbstractSeleniumTest.java
-    - Base class for Selenium-based browser tests
+- AbstractSeleniumTest.java - Base class for Selenium-based browser tests
 
 ## Build and run
 
