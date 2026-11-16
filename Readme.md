@@ -3,23 +3,17 @@
 This project is a sample test framework for mobile and web automation.
 
 It is made to run tests for:
-- Android apps
-- iOS apps
-- Web browser tests in Chrome
+- Android apps , iOS apps  and Web browser tests in Chrome
 
 The project uses Java and Gradle. It also uses tools like:
-- Appium
-- Selenium
-- JUnit 5
+- Appium , Selenium , JUnit 5
 
 This project is a basic example for testing apps and web pages in different environments.
 
 ## What the project does
 
 The project runs automated test cases for:
-- Android devices
-- iOS devices
-- Chrome browser
+- Android devices, iOS devices and Chrome browser
 
 It can be used for checking if an app works correctly, if a page loads correctly, and if user actions like tapping, typing, and clicking work as expected.
 
