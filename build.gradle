@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+}
+
+group = 'local.tests'
+version = '1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.appium:java-client:9.4.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.11.4'
+}
+
+tasks.named('test', Test) { Test testTask ->
+    testTask.useJUnitPlatform()
+    def platform = System.getProperty('device.platform')
+    if (platform != null && !platform.isBlank()) {
+        testTask.systemProperty 'device.platform', platform
+    }
+}
+
+task runAllPlatformAutomation(type: AutomationJob) {
+    automationTest {
+        suite 'local.tests.suites.android.AndroidRunner01'
+        suite 'local.tests.suites.ios.IosRunner01'
+        suite 'local.tests.suites.browser.BrowserRunner01'
+    }
+//    automationTest {
+//        suite 'local.tests.suites.ios.IosRunner01'
+//    }
+//    automationTest {
+//        suite 'local.tests.suites.browser.BrowserRunner01'
+//    }
+}
